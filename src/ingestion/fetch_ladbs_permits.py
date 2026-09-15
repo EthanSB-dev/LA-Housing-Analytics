@@ -127,6 +127,39 @@ def fetch_full(client: Socrata, start_date: str) -> None:
     print(f"\nSaved {len(df):,} rows to {out_path}")
     print(f"Saved retrieval metadata to {meta_path}")
 
+def explore_categories(client: Socrata) -> None:
+    """
+    Pull distinct values (with counts) for the fields that will drive our
+    residential-permit filter, so we define that filter from real data
+    instead of guessing. Uses Socrata's SoQL aggregation (group + count),
+    which runs server-side -- fast, no need to download the whole dataset.
+    """
+    fields_to_explore = [
+        "permit_type",
+        "permit_sub_type",
+        "use_desc",
+        "permit_group",
+        "business_unit",
+    ]
+    summary = {}
+    for field in fields_to_explore:
+        results = client.get(
+            DATASET_ID,
+            select=f"{field}, count(*) as permit_count",
+            group=field,
+            order="permit_count DESC",
+            limit=200,
+        )
+        summary[field] = results
+        print(f"\n=== {field} ({len(results)} distinct values) ===")
+        for row in results:
+            print(f"  {row.get(field, '(null)'):<40} {row['permit_count']}")
+
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    out_path = RAW_DIR / "ladbs_category_exploration.json"
+    with open(out_path, "w") as f:
+        json.dump(summary, f, indent=2)
+    print(f"\nFull results saved to: {out_path}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -135,6 +168,8 @@ if __name__ == "__main__":
                        help="Pull 5 sample rows and print real column names")
     mode.add_argument("--full", action="store_true",
                        help="Pull the full dataset from --start-date onward")
+    mode.add_argument("--categories", action="store_true",
+                       help="Show distinct values for the fields used to filter residential permits")
     parser.add_argument("--start-date", default="2020-01-01",
                          help="Earliest issue date to include (YYYY-MM-DD)")
     args = parser.parse_args()
@@ -142,5 +177,7 @@ if __name__ == "__main__":
     socrata_client = get_client()
     if args.inspect:
         inspect(socrata_client)
+    elif args.categories:
+        explore_categories(socrata_client)
     else:
         fetch_full(socrata_client, args.start_date)
