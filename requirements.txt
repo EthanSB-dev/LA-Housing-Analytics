@@ -1,0 +1,10 @@
+# --- Phase 1: ingestion + local analytical warehouse ---
+# Installed now. geopandas/shapely (needed later for the tract spatial join)
+# are added in a later phase on purpose -- they pull in GDAL, which can be
+# slow/finicky to install on Windows, and we don't need them yet.
+
+requests>=2.31        # calling the Socrata (LA Open Data) and Census APIs
+python-dotenv>=1.0    # loads API keys from .env instead of hardcoding them
+pandas>=2.0            # tabular data wrangling
+duckdb>=0.10           # embedded analytical SQL warehouse (no server to install)
+sodapy>=2.2            # official-style Python client for Socrata APIs, handles pagination/auth
