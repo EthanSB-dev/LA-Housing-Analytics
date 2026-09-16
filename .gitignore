@@ -27,3 +27,6 @@ Thumbs.db
 
 # VS Code
 .vscode/
+
+#Tableau
+.~*.twbr

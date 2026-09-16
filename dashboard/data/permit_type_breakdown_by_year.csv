@@ -1,0 +1,74 @@
+year,development_category,is_residential,permit_count,total_valuation
+2020,Addition,False,240,335623706.0
+2020,Addition,True,3648,292415743.38
+2020,Alteration/Repair,True,29765,460539059.19000006
+2020,Alteration/Repair,False,5770,1026408813.39
+2020,Demolition,False,601,15427386.97
+2020,Demolition,True,1025,8312892.58
+2020,New Construction,True,2398,1739698972.35
+2020,New Construction,False,676,2132664341.0
+2020,Other/Non-Building,True,4,5056.0
+2020,Other/Non-Building,False,7769,263882426.14
+2020,Relocation,True,1,115000.0
+2021,Addition,False,271,396328413.4
+2021,Addition,True,4742,399444481.51
+2021,Alteration/Repair,True,30532,526149563.74
+2021,Alteration/Repair,False,6501,1100860664.67
+2021,Demolition,True,1127,9416874.879999999
+2021,Demolition,False,729,12627456.879999999
+2021,New Construction,True,2852,1878788474.8799999
+2021,New Construction,False,666,1473670101.5
+2021,Other/Non-Building,True,4,21500.0
+2021,Other/Non-Building,False,9992,256566880.66
+2021,Relocation,False,2,60000.0
+2021,Relocation,True,1,30000.0
+2022,Addition,True,5943,553141282.4
+2022,Addition,False,244,630474761.0
+2022,Alteration/Repair,False,7405,1186630734.2199998
+2022,Alteration/Repair,True,33862,638399653.25
+2022,Demolition,False,1056,17856925.8
+2022,Demolition,True,1251,12222764.0
+2022,New Construction,False,897,2472541321.85
+2022,New Construction,True,3732,2161251083.52
+2022,Other/Non-Building,False,10947,280980764.40999997
+2023,Addition,True,4993,489944157.72
+2023,Addition,False,233,185097408.0
+2023,Alteration/Repair,False,6971,1059579152.99
+2023,Alteration/Repair,True,37324,614397899.45
+2023,Demolition,False,873,11622800.0
+2023,Demolition,True,925,9122251.0
+2023,New Construction,True,3188,1708719681.8300006
+2023,New Construction,False,648,973769789.46
+2023,Other/Non-Building,False,9014,220462033.49
+2023,Other/Non-Building,True,1,0.0
+2024,Addition,True,5014,570523640.55
+2024,Addition,False,225,157104846.0
+2024,Alteration/Repair,False,6548,936222992.7399999
+2024,Alteration/Repair,True,38838,685909168.38
+2024,Demolition,False,988,23203311.5
+2024,Demolition,True,789,7466989.0
+2024,New Construction,True,3044,1322431720.77
+2024,New Construction,False,636,1042939402.24
+2024,Other/Non-Building,False,8691,270782250.91
+2024,Relocation,True,3,520659.0
+2025,Addition,False,233,110867417.0
+2025,Addition,True,5228,676009036.5500001
+2025,Alteration/Repair,True,35852,735844163.6800001
+2025,Alteration/Repair,False,6220,1074677049.88
+2025,Demolition,False,1229,14960258.0
+2025,Demolition,True,630,6737638.0
+2025,New Construction,True,3700,1872966931.17
+2025,New Construction,False,728,495421783.12
+2025,Other/Non-Building,False,9537,248947713.33999997
+2025,Other/Non-Building,True,1,3000.0
+2025,Relocation,False,3,57000.0
+2026,Addition,True,3295,401110523.22
+2026,Addition,False,181,2400719995.66
+2026,Alteration/Repair,True,25572,580300571.3399999
+2026,Alteration/Repair,False,4574,1399785140.9299998
+2026,Demolition,False,991,12594988.0
+2026,Demolition,True,112,1262963.0
+2026,New Construction,False,483,738624429.5400001
+2026,New Construction,True,2859,2102331671.6499999
+2026,Other/Non-Building,False,7105,258079227.56
+2026,Other/Non-Building,True,1,8400.0
