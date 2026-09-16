@@ -13,5 +13,7 @@ SELECT
     median_gross_rent,
     pct_severely_rent_burdened,
     pct_renter_occupied,
-    pct_vacant
+    pct_vacant,
+    tenure_total_occupied_units,
+    occupancy_total_units
 FROM staging.stg_acs_tract;
