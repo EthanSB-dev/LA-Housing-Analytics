@@ -7,9 +7,18 @@ Where is housing development activity in the City of Los Angeles
 concentrated, and are the areas under the greatest affordability pressure
 receiving enough of it?
 
-> Status: project scaffold + data ingestion in progress. Findings,
-> methodology write-up, and dashboard screenshots below are placeholders
-> until the analysis produces real results.
+## Sample Finding: Need vs. Development Gap
+
+![Need vs Development Gap quadrant chart](dashboard/screenshots/quadrant_gap_analysis.png)
+
+Each point is one LA census tract (2020-2026 data), plotted by cumulative
+residential permit activity against an independent affordability-pressure
+index built from ACS rent-burden, renter-share, and income data. Tracts in
+the upper-left (orange) show high affordability pressure paired with
+comparatively low development activity -- see `docs/methodology.md` for
+how the index is built and `docs/data_dictionary.md` for a real data-quality
+issue (a Census sentinel value that was silently corrupting this exact
+chart) found and fixed during development.
 
 ## Data sources
 
